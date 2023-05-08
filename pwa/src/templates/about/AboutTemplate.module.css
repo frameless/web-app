@@ -1,0 +1,64 @@
+.container > * {
+  margin-block-start: var(--web-app-size-3xl);
+}
+
+.section > *:not(:last-child) {
+  margin-block-end: var(--web-app-size-xl);
+  color: var(--web-app-color-text-grey) !important;
+}
+
+.buttonsContainer {
+  display: flex;
+}
+
+.buttonsContainer > *:not(:last-child) {
+  margin-inline-end: var(--web-app-size-sm);
+}
+
+.quoteWrapperContainer {
+  margin-block-start: var(--web-app-size-md);
+  margin-block-end: var(--web-app-size-md);
+}
+
+.quoteWrapperContainer > * {
+  padding-block-start: var(--web-app-size-md);
+  padding-block-end: var(--web-app-size-md);
+}
+
+.author {
+  font-size: var(--web-app-font-size-sm);
+  display: block;
+  margin-block-start: var(--web-app-size-sm);
+}
+
+.layersVisual {
+  width: 100%;
+}
+
+.paragraphButtons > *:not(:last-child) {
+  margin-inline-end: var(--web-app-size-sm);
+}
+.paragraphButtons {
+  display: flex;
+}
+
+.description {
+  color: var(--web-app-color-text-grey) !important;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--web-app-size-2xl);
+}
+
+.tableRow > td {
+  min-width: 250px;
+}
+
+@media screen and (max-width: 1060px) {
+  .standardsTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

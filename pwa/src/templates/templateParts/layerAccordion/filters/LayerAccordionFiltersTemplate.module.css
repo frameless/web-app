@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--web-app-size-md);
+}
+
+.container > * {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.container > *.active {
+  font-weight: var(--web-app-font-weight-bold);
+}
+
+.container > *:hover {
+  cursor: pointer;
+}
+
+.container > .disabled:hover {
+  cursor: no-drop;
+}
+
+.container .disabled {
+  opacity: var(--web-app-layer-accordion-disabled-opacity);
+}
+
+.container > *::before {
+  content: " ";
+  display: inline-block;
+  width: var(--web-app-size-md);
+  height: var(--web-app-size-md);
+  background-color: var(--web-app-color-background-light);
+  margin-inline-end: var(--web-app-size-2xs);
+}
+
+:not(.disabled).filter:not(.active) {
+  opacity: var(--web-app-layer-accordion-inactive-opacity);
+}
+
+.container > .interaction.active::before {
+  background-color: var(--web-app-layer-color-interaction);
+}
+.container > :not(.disabled).interaction:not(.active)::before {
+  background-color: var(--web-app-layer-color-interaction);
+}
+
+.container > .process.active::before {
+  background-color: var(--web-app-layer-color-process);
+}
+.container > :not(.disabled).process:not(.active)::before {
+  background-color: var(--web-app-layer-color-process);
+}
+
+.container > .integration.active::before {
+  background-color: var(--web-app-layer-color-integration);
+}
+.container > :not(.disabled).integration:not(.active)::before {
+  background-color: var(--web-app-layer-color-integration);
+}
+
+.container > .service.active::before {
+  background-color: var(--web-app-layer-color-services);
+}
+.container > :not(.disabled).service:not(.active)::before {
+  background-color: var(--web-app-layer-color-services);
+}
+
+.container > .data.active::before {
+  background-color: var(--web-app-layer-color-data);
+}
+.container > :not(.disabled).data:not(.active)::before {
+  background-color: var(--web-app-layer-color-data);
+}
+
+.container > .unknown.active::before {
+  background-color: var(--web-app-color-top-nav-grey);
+}
+.container > :not(.disabled).unknown:not(.active)::before {
+  background-color: var(--web-app-color-top-nav-grey);
+}

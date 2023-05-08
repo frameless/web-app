@@ -1,0 +1,78 @@
+.footer {
+  background-color: var(--web-app-color-background-footer);
+  padding-block-start: var(--web-app-size-xl);
+  padding-block-end: var(--web-app-size-xl);
+}
+
+.footerContainer > *:not(:last-child) {
+  margin-block-end: var(--web-app-size-xl);
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.heading {
+  font-weight: bold;
+  color: var(--web-app-color-footer-text) !important;
+  margin-block-end: var(--web-app-size-lg);
+  font-size: var(--web-app-font-size-lg);
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.list > li:hover {
+  cursor: pointer;
+}
+
+.list > li:not(:last-child) {
+  margin-block-end: var(--web-app-size-md);
+}
+
+.list > li > * {
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  color: var(--web-app-color-footer-text) !important;
+}
+
+.logosContainer {
+  display: flex;
+  width: fit-content;
+  height: var(--web-app-footer-logo-container-height);
+  border-radius: var(--web-app-footer-logo-container-border-radius);
+  padding: var(--web-app-footer-logo-container-padding);
+  background-color: var(--web-app-footer-logo-container-background-color);
+}
+
+.logosContainer > * {
+  height: 100%;
+}
+
+.logosContainer > *:hover {
+  cursor: pointer;
+}
+
+.logosContainer > *:not(:last-child) {
+  margin-inline-end: var(--web-app-size-lg);
+}
+
+.organizationLogo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: var(--web-app-footer-organization-logo-padding);
+  width: var(--web-app-footer-organization-logo-width);
+  background-image: var(--web-app-footer-organization-logo-src);
+  background-color: var(--web-app-footer-organization-logo-background-color);
+  background-origin: content-box;
+}
+
+@media only screen and (min-width: 576px) {
+  .navigation {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
